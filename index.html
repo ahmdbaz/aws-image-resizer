@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Resizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="app-header">
+        <div class="logo-mark">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#FF9900"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <polyline points="21 15 16 10 5 21" />
+          </svg>
+        </div>
+        <h1>Image Resizer</h1>
+        <p class="app-subtitle">
+          Upload your image — we'll resize it and send you the result by email.
+        </p>
+      </header>
+
+      <div class="card">
+        <!-- Upload Zone -->
+        <div class="upload-zone" id="uploadZone">
+          <input type="file" id="fileInput" accept="image/*" hidden />
+          <div class="upload-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="52"
+              height="52"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="16 16 12 12 8 16" />
+              <line x1="12" y1="12" x2="12" y2="21" />
+              <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3" />
+            </svg>
+          </div>
+          <p class="upload-main-text">Drag &amp; drop your image here</p>
+          <p class="upload-sub-text">
+            or <span class="upload-link">click to browse</span>
+          </p>
+          <p class="upload-formats">
+            JPG &nbsp;·&nbsp; PNG &nbsp;·&nbsp; GIF &nbsp;·&nbsp; WebP
+            &nbsp;·&nbsp; BMP
+          </p>
+        </div>
+
+        <!-- Preview Area -->
+        <div class="preview-area" id="previewArea">
+          <div class="preview-wrapper">
+            <img id="previewImage" src="" alt="Selected image preview" />
+          </div>
+          <div class="file-meta">
+            <span id="fileName" class="file-name"></span>
+            <span id="fileSize" class="file-size"></span>
+          </div>
+          <button class="btn-ghost" id="changeBtn">
+            Choose a different image
+          </button>
+        </div>
+
+        <!-- Upload Button -->
+        <button class="btn-primary" id="uploadBtn" disabled>
+          <div class="btn-spinner" id="btnSpinner"></div>
+          <span class="btn-label" id="btnLabel">Upload &amp; Resize</span>
+        </button>
+
+        <!-- Status Message -->
+        <div class="status-box" id="statusBox">
+          <div class="status-icon" id="statusIcon"></div>
+          <div class="status-text" id="statusText"></div>
+        </div>
+      </div>
+      <!-- /.card -->
+    </div>
+    <!-- /.container -->
+
+    <footer>
+      <p>Made by Ahmed Mohammed Baz</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
